@@ -17,6 +17,10 @@ def triArea(base,height):
     """ Returns the area of the triangle"""
     return base * height / 2;
     
+def squareArea(base):
+    """Returns the area of the squarew"""
+    return base*base;
+    
 	
 class MyTest(unittest.TestCase): # inheriting from unittest.Testcase
     def testCircleArea(self):
@@ -31,3 +35,6 @@ class MyTest(unittest.TestCase): # inheriting from unittest.Testcase
     def testTriArea(self):
         self.assertEqual(triArea(3,3),4.5)
         self.assertAlmostEqual(triArea(4.2,6.4), 13.44)
+       
+    def testSquareArea(self):
+        self.assertEqual(squareArea(6),36) 
